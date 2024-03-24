@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../static/img/logo.png">
+    <title>EMS using Blockchain</title>
+</head>
+
+<body class="std-detail text-black">
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand navbar-light w-100 bg-info shadow-lg position-fixed">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto mx-md-0">
+                    <img class="navlogo nav-link img-fluid p-0 me-2" src="../static/img/logo.png" height="40px" alt="">
+                    <p class="nav-title navbar-brand fw-bold m-0 me-5" href="#">E-Attendance Using Blockchain</p>
+                    <div class="container">
+                        <a class="nav-link text-black px-4 float-start d-none d-md-block" href="/">HOME</a>
+                        <a class="nav-link text-black px-4 float-start d-none d-md-block" href="/about">ABOUT</a>
+                        <a class="nav-link text-black px-4 float-start d-none d-md-block" href="#">CONTACT</a>
+                    </div>
+                    <div>
+                        <div class="profile-div d-flex position-absolute">
+                            <img class="profile nav-link img-fluid p-0 me-2" src="../static/img/profile.png"
+                                height="30px" alt="">
+                            <p class="nav-title navbar-brand fw-bold m-0 me-3" href="#">Admin</p>
+
+                            <i class="fa-solid nav-link fa-arrow-right-from-bracket fa-lg mt-2"></i>
+                            <a class="logout text-decoration-none text-black" href="/admin_logout">
+                                <p class="nav-title navbar-brand fw-bold m-0">Logout</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- side bar -->
+
+    <div class="pt-5">
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-info position-fixed shadow mt-2"
+            style="height: 600px; width: 260px;">
+            <a href="/admin_dashboard"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <span class="dash-heading fs-4 ms-5 mb-3 mt-0 fw-bold">Dashboard</span>
+            </a>
+            <hr class="m-0 mb-3">
+            <ul class="nav flex-column">
+                <li>
+                    <a href="/add_student" class="dash-item rounded nav-link link-dark ps-0 mb-2">
+                        <img class="admin-dash-img img-fluid pe-3" src="../static/img/add-student-white.png" alt="">
+                        <span class="fw-bold">Add Student</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/add_faculty" class="dash-item rounded nav-link link-dark ps-0 mb-2">
+                        <img class="admin-dash-img img-fluid pe-3" src="../static/img/add-faculty-white.png" alt="">
+                        <span class="fw-bold">Add Faculty</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/student_detail" class="dash-item rounded nav-link link-dark ps-0 mb-2">
+                        <img class="admin-dash-img img-fluid pe-4" src="../static/img/student-white.png" alt="">
+                        <span class="fw-bold">Student Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/faculty_detail" class="dash-item rounded nav-link link-dark ps-0 mb-2">
+                        <img class="admin-dash-img img-fluid pe-3" src="../static/img/faculty-white.png" alt="">
+                        <span class="fw-bold">Faculty Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/view_attendance" class="dash-item rounded nav-link link-dark ps-0 mb-2">
+                        <img class="admin-dash-img img-fluid pe-3" src="../static/img/show-attendance-white.png" alt="">
+                        <span class="fw-bold">View Attendance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/view_reviews" class="dash-item item-active rounded nav-link link-dark ps-0 mb-2">
+                        <img class="admin-dash-img img-fluid pe-3" src="../static/img/student-reviews-white.png" alt="">
+                        <span class="fw-bold">Student's Reviews</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/view_justification_admin" class="dash-item rounded nav-link link-dark ps-0 mb-2">
+                        <img class="admin-dash-img img-fluid pe-3" src="../static/img/justification-white.png" alt="">
+                        <span class="fw-bold">Justificaions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/all_blocks" class="dash-item rounded nav-link link-dark ps-0 mb-2">
+                        <img class="admin-dash-img img-fluid pe-3" src="../static/img/all-blocks-white.png" alt="">
+                        <span class="fw-bold">All Blocks of Chain</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- main div -->
+
+    <div class="main-div text-center">
+        <div class="add-in">
+            <div class="login">
+                <p class="heading fs-4 fw-bold">Students Reviews</p>
+                <div class="table">
+                    <table class="table table-responsive table-bordered border-info table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Student Id</th>
+                                <th>Student Name</th>
+                                <th>Review Date</th>
+                                <th>Student reviews</th>
+                                <th>Prev_hash</th>
+                                <th>hash</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in chain %}
+                            <tr>
+                                <td> {{ i.data.get("id") }}</td>
+                                <td> {{ i.data.get("name") }}</td>
+                                <td> {{ i.data.get("date") }}</td>
+                                <td> {{ i.data.get("reviews") }}</td>
+                                <td> {{ i.previous_hash }}</td>
+                                <td> {{ i.hash }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="asset/js/bootstrap.min.js"></script>
+</body>
+
+</html>

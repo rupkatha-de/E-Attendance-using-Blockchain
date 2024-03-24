@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,700,900&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../static/img/logo.png">
+    <title>EMS using Blockchain</title>
+</head>
+
+<body class="admin-dash text-black">
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand navbar-light w-100 bg-info shadow-lg position-fixed">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mx-auto mx-md-0">
+                    <img class="navlogo nav-link img-fluid p-0 me-2" src="../static/img/logo.png" height="40px" alt="">
+                    <p class="nav-title navbar-brand fw-bold m-0 me-5" href="#">E-Attendance Using Blockchain</p>
+                    <div class="container">
+                        <a class="nav-link text-black px-4 float-start d-none d-md-block" href="/">HOME</a>
+                        <a class="nav-link text-black px-4 float-start d-none d-md-block" href="/about">ABOUT</a>
+                        <a class="nav-link text-black px-4 float-start d-none d-md-block" href="#">CONTACT</a>
+                    </div>
+                    <div>
+                        <div class="profile-div d-flex position-absolute">
+                            <img class="profile nav-link img-fluid p-0 me-2" src="../static/img/profile.png"
+                                height="30px" alt="">
+                            <p class="nav-title navbar-brand fw-bold m-0 me-3">{{currentuser}}</p>
+
+                            <i class="fa-solid nav-link fa-arrow-right-from-bracket fa-lg mt-2"></i>
+                            <a class="logout text-decoration-none text-black" href="/student_logout">
+                                <p class="nav-title navbar-brand fw-bold m-0">Logout</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main body -->
+
+    <div class="main-div pt-5">
+        <div class=" container-fluid text-center">
+
+            <div class="p-3 mt-5">
+                <p class="heading fs-2 fw-bold">Student Dashboard</p>
+            </div>
+           
+            <div class="row text-center w-75 pt-5 mx-auto">
+
+                <div class="col text-center">
+                    <div class="role p-3">
+                        <a class="text-decoration-none text-black" href="/attendance">
+                            <img class="dash-img img-fluid mb-3" src="../static/img/show-attendance.png" alt="">
+                            <p class="fw-bold">Mark Attendance</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="role p-3">
+                        <a class="text-decoration-none text-black" href="/student_reviews">
+                            <img class="dash-img img-fluid mb-3" src="../static/img/student-reviews.png" alt="">
+                            <p class="fw-bold">Give Reviews</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col pe-5 text-center">
+                    <div class="role p-3">
+                        <a class="text-decoration-none text-black" href="/student_absjustification">
+                            <img class="dash-img img-fluid mb-3" src="../static/img/justification.png" alt="">
+                            <p class="fw-bold">Justification for Absense</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="asset/js/bootstrap.min.js"></script>
+</body>
+
+</html>

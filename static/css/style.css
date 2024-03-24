@@ -1,0 +1,273 @@
+body {
+    font-family: 'poppins';
+}
+
+/* navbar */
+
+.navlogo {
+    height: 40px;
+}
+
+.nav-title {
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #00a9cb;
+}
+
+.home .main-div .para-1 {
+    padding-top: 65px;
+}
+
+.about .main-div .about-div {
+    border-radius: 20px;
+    width: 80%;
+    margin: 40px auto 0 auto;
+    background-color: #99eeff;
+}
+
+.back-home{
+    position: absolute;
+    top: 75px;
+    left: 20px;
+}
+
+.back-home a{
+    color: black;
+}
+
+.back-home a:hover{
+    color: #009fbe;
+}
+
+.admin-login .main-div .login {
+    padding: 15px 140px;
+    border-radius: 20px;
+    width: 60%;
+    margin: 40px auto 0 auto;
+    background-image: linear-gradient(#efefef, #aaf1ff);
+}
+
+.admin-login .main-div .login form {
+    margin-top: 70px;
+}
+
+.admin-login .main-div .login .input {
+    border: none;
+    border-bottom: 2px solid #00cef7;
+    border-radius: 7px;
+    outline: none;
+    background: none;
+    margin-left: 100px;
+    margin-bottom: 45px;
+}
+
+.admin-login .main-div .login .login-btn {
+    width: 30%;
+    background-color: #0DCAF0;
+    height: 35px;
+    transition: all 0.5s;
+}
+
+.admin-login .main-div .login .login-btn:hover {
+    background-color: #47e0ff;
+    transition: all 0.5s;
+}
+
+.about .main-div .para {
+    margin-top: -35px;
+}
+
+.home .main-div .buttons {
+    margin: 0 200px;
+}
+
+.home .main-div .buttons img {
+    height: 60px;
+    opacity: 0.8;
+}
+
+.home .main-div .person {
+    border-radius: 15px;
+    transition: transform 1s ease;
+    background-color: #aaf1ff;
+}
+
+.home .main-div .person:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+/* admin dashboard */
+
+.person-img {
+    height: 70px;
+}
+
+.enroled-std-1 {
+    padding: 30px 0px 30px 160px;
+}
+
+.enroled-std-2 {
+    padding: 30px 60px 30px 95px;
+}
+
+.devider {
+    margin-left: 45.5%;
+    width: 50%;
+}
+
+.dash-img {
+    height: 100px;
+}
+
+.add-std {
+    margin-left: 8%;
+}
+
+.role{
+    transition: transform 0.5s ease;
+}
+
+.role:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.calc{
+    transition: transform 0.5s ease;
+}
+
+.calc:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.profile-div{
+    right: 10px;
+}
+
+.profile{
+    height: 35px;
+    /* margin-left: 155%; */
+}
+
+.logout:hover{
+    background-color: #0DCAF0 !important;
+}
+
+.admin-dash-img{
+    height: 40px;
+    opacity: 0.9;
+}
+
+.dash-heading{
+    transition: transform 0.5s ease;
+}
+
+.dash-heading:hover{
+    color: #0D6EFD;
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.dash-item{
+    height: 50px;
+    transition: all 0.5s ease;
+}
+
+.dash-item:hover{
+    background-color: #0D6EFD;
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.item-active{
+    background-color: #0D6EFD;
+    color: white;
+    scale: 1.05;
+}
+
+/* add student */
+
+.add-stud .main-div{
+    margin-left: 260px;
+}
+
+.add-fac .main-div{
+    margin-left: 260px;
+}
+
+.std-detail .main-div{
+    margin-left: 260px;
+}
+
+.std-detail .add-in .login {
+    padding: 15px 40px;
+    border-radius: 20px;
+    width: 95%;
+    margin: 20px auto 0 auto;
+    background-image: linear-gradient(#efefef, #aaf1ff);
+    overflow: scroll;
+    height: 535px;
+}
+
+.add-in .login {
+    padding: 15px 40px;
+    border-radius: 20px;
+    width: 60%;
+    margin: 50px auto 0 auto;
+    background-image: linear-gradient(#efefef, #aaf1ff);
+}
+
+.add-in .login form {
+    margin-top: 70px;
+}
+
+.add-in .login .input {
+    border: none;
+    border-bottom: 2px solid #00cef7;
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    width: 90%;
+    font-size: 15px;
+}
+
+.add-in .login .login-btn {
+    width: 30%;
+    background-color: #0DCAF0;
+    height: 35px;
+    transition: all 0.5s;
+}
+
+.add-in .login .login-btn:hover {
+    background-color: #47e0ff;
+    transition: all 0.5s;
+}
+
+.add-in .pass-small{
+    font-size: 10px;
+}
+
+/* .main-div .div-1{
+    padding-left: 300px;
+}
+
+.main-div .div-2{
+    padding-right: 300px;
+} */
+
+.success{
+    color: rgb(35 216 72);
+}
+
+.error{
+    color: red;
+}
+
+.label-float{
+transition: opacity .5s ease-in-out,transform .5s ease-in-out !important;
+}
